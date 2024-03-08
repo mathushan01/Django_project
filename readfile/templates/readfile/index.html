@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+  </head>
+  <body>
+    <h1>Combined CSV Data</h1>
+    <br>
+    <h2>1.School</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <!--print the school column -->
+                <th>ID</th>
+                {% for column in school.columns %}
+                <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            <!--print the datas -->
+            {% for index, row in school.iterrows %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                {% for value in row %}
+                <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>2.Class</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <!--print the Class column -->
+                <th>ID</th>
+                {% for column in class_data.columns %}
+                <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            <!--print the datas -->
+            {% for index, row in class_data.iterrows %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                {% for value in row %}
+                <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>3.Assessment Areas</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <!--print the Assessment Areas column -->
+                <th>ID</th>
+                {% for column in assessmentAreas.columns %}
+                <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            <!--print the datas -->
+            {% for index, row in assessmentAreas.iterrows %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                {% for value in row %}
+                <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>4.Full Name</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <!--print the Full Name column -->
+                <th>ID</th>
+                {% for column in fullname.columns %}
+                <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            <!--print the datas -->
+            {% for index, row in fullname.iterrows %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                {% for value in row %}
+                <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>5.Answer</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <!--print the Answer column -->
+                <th>ID</th>
+                {% for column in answer.columns %}
+                <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            <!--print the datas -->
+            {% for index, row in answer.iterrows %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                {% for value in row %}
+                <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>6.Award</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <!--print the Award column -->
+                <th>ID</th>
+                {% for column in award.columns %}
+                <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            <!--print the datas -->
+            {% for index, row in award.iterrows %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                {% for value in row %}
+                <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>7.Subject</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <!--print the Subject column -->
+                <th>ID</th>
+                {% for column in subject.columns %}
+                <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            <!--print the datas -->
+            {% for index, row in subject.iterrows %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                {% for value in row %}
+                <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>8.Summary</h2>
+    <div id='summary'>
+    <table border="1">
+        <thead>
+            <tr>
+                <!--print the summary column -->
+                <th>School_Id</th>
+                <th>Assessment_Areas_Id</th>
+                <th>Award_Id</th>
+                <th>Class_Id</th>
+                <th>Subject_Id</th>
+                <th>Category_Id</th>
+                <th>Answer_Id</th>
+                <th>Correct_Answer_Id</th>
+                {% for column in summary.columns %}
+                <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            <!--print the datas -->
+            {% for index, row in summary.iterrows %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ forloop.counter }}</td>
+                {% for value in row %}
+                <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+  </body>
+</html>
